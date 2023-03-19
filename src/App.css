@@ -73,12 +73,53 @@
   display: flex !important;
 }
 
+.slick-slider {
+  position: relative;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 40%;
+  width: 30px;
+  height: 30px;
+  background: white;
+  justify-content: center;
+  display: flex !important;
+  border-radius: 20px;
+  align-items: center;
+  z-index: 10;
+}
+
 .slick-next {
   right: 0;
-  top: 42px;
+  top: 40%;
+  width: 30px;
+  height: 30px;
+  background: white;
+  justify-content: center;
   position: absolute;
+  display: flex !important;
+  border-radius: 20px;
+  align-items: center;
 }
 
 .active-button {
   background-color: greenyellow;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }

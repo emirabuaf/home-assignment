@@ -3,6 +3,8 @@ import { useState, useContext, useEffect } from "react";
 import { PhotosContext } from '../contexts/PhotosProvider'
 import Button from "./Button";
 import Slider, { Settings } from 'react-slick';
+import NextArrow from "./NextArrow";
+import PrevArrow from "./PrevArrow";
 
 const Photolist = () => {
   const { photos, loading, error } = useContext(PhotosContext);
@@ -37,6 +39,8 @@ const Photolist = () => {
     slidesToShow: isMobile ? 1 : 3,
     slidesToScroll: 1,
     centerMode: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
