@@ -2,8 +2,9 @@ import 'matchmedia-polyfill';
 import { render, screen, fireEvent } from "@testing-library/react";
 import { PhotosContext } from "./contexts/PhotosProvider";
 import Photolist from "./components/PhotoList";
-import 'matchmedia-polyfill';
 import 'matchmedia-polyfill/matchMedia.addListener';
+import '@testing-library/jest-dom';
+
 
 const mockPhotos = [
   { id: 1, author: "Emir A.", download_url: "https://example.com/1.jpg" },
@@ -22,7 +23,7 @@ describe("Photolist component", () => {
   });
 
   it("renders error state when error is not null", () => {
-    const error = "Something went wrong!";
+    const error = "Something went wrog!";
     render(
       <PhotosContext.Provider value={{ photos: [], loading: false, error }}>
         <Photolist />
